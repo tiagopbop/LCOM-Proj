@@ -1,0 +1,96 @@
+Subscribed! 
+IRQ set is effff434 
+Entered serialporEntered serialport interrupt handler
+Receiving byte: 3 
+Popped data from queue: 3
+Processing data: 3
+Mode changed to MENU
+Entered serialport interrupt handler
+Recx: 0, y: 811
+x: 0, y: 811
+x: 0, y: 811
+x: 0, y: 811
+x: 0, y: 811
+x: 0, y: 811
+x: 0, y: 811
+x: 0, y: 811
+xSending byte: 3 
+Sending byte: 1 
+Entered serialport interrupt handler
+Receiving byte: 2 
+Popped data from queue: 2
+Processing data: 2
+Mode changed to EDIT_BOARD
+Ship placed at (308, 383)
+Ship placed at (148, 303)
+Ship placed at (308, 223)
+Sending byte: 5 
+ENTERED ATACK MODEEntered serialport interrupt handler
+Receiving byte: 6 
+Popped data from queue: 6
+Processing data: 6
+Mode changed to ATTACK
+Sending attackSending byte: 33 
+Entered serialport interrupt handler
+Receiving byte: 240 
+Popped data from queue: 240
+Processing data: 240
+Checking outcomeEntered serialport interrupt handler
+Receiving byte: 67 
+Popped data from queue: 67
+Processing data: 67
+Received attack at (4, 3)
+Defending boardOccupied cell at (1, 3)
+Occupied cell at (2, 1)
+Occupied cell at (3, 1)
+Occupied cell at (3, 3)
+Occupied cell at (3, 4)
+Occupied cell at (4, 1)
+Sending byte: 241 
+Switch to attackSending attackSending byte: 49 
+Entered serialport interrupt handler
+Receiving byte: 241 
+Popped data from queue: 241
+Processing data: 241
+Checking outcomechanged to INVITE, role set to INVITEE
+Sending byte: 2 
+Entered serialport interrupt handler
+Receiving byte: 5 
+Popped data from queue: 5
+Processing data: 5
+Mode changed to EDITSOLO
+Ship placed at (228, 383)
+Ship placed at (148, 223)
+Ship placed at (308, 143)
+ENTERED DEFENDD MODE
+Sending byte: 6 
+Entered serialport interrupt handler
+Receiving byte: 33 
+Popped data from queue: 33
+Processing data: 33
+Received attack at (2, 1)
+Defending boardOccupied cell at (0, 3)
+Occupied cell at (1, 1)
+Occupied cell at (1, 3)
+Occupied cell at (2, 3)
+Occupied cell at (3, 2)
+Occupied cell at (3, 3)
+Sending byte: 240 
+Switch to attackSending attackSending byte: 67 
+Entered serialport interrupt handler
+Receiving byte: 241 
+Popped data from queue: 241
+Processing data: 241
+Checking outcomeEntered serialport interrupt handler
+Receiving byte: 49 
+Popped data from queue: 49
+Processing data: 49
+Received attack at (3, 1)
+Defending boardOccupied cell at (0, 3)
+Occupied cell at (1, 1)
+Occupied cell at (1, 3)
+Occupied cell at (2, 3)
+Occupied cell at (3, 2)
+Occupied cell at (3, 3)
+Sending byte: 241 
+Switch to attack
