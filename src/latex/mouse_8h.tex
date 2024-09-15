@@ -1,0 +1,142 @@
+\hypertarget{mouse_8h}{}\doxysection{drivers/keyboard\+\_\+and\+\_\+mouse/mouse.h File Reference}
+\label{mouse_8h}\index{drivers/keyboard\_and\_mouse/mouse.h@{drivers/keyboard\_and\_mouse/mouse.h}}
+
+
+Functions for handling mouse interrupts and communication.  
+
+
+{\ttfamily \#include $<$minix/sysutil.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}i8042.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}KBC.\+h\char`\"{}}\newline
+Include dependency graph for mouse.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void() \mbox{\hyperlink{mouse_8h_a428eea6851ed11e32b839e5de9438e05}{get\+\_\+mouse\+\_\+packet}} (struct packet $\ast$p)
+\begin{DoxyCompactList}\small\item\em Retrieves the mouse packet. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{mouse_8h_a20285aed4b3ef45812cd967532dd09db}{mouse\+\_\+subscribe\+\_\+int}} (uint8\+\_\+t $\ast$bit\+\_\+no)
+\begin{DoxyCompactList}\small\item\em Subscribes mouse interrupts. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{mouse_8h_a3ecf823d80520009ae5e0d76ae40a3c3}{mouse\+\_\+unsubscribe\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes mouse interrupts. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{mouse_8h_a210374b50462acdedab00df64d5cea3c}{mouse\+\_\+ih}} ()
+\begin{DoxyCompactList}\small\item\em Mouse interrupt handler. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{mouse_8h_a0cadebf786b317268fe79aecb6b47601}\label{mouse_8h_a0cadebf786b317268fe79aecb6b47601}} 
+void() \mbox{\hyperlink{mouse_8h_a0cadebf786b317268fe79aecb6b47601}{build\+\_\+packet}} ()
+\begin{DoxyCompactList}\small\item\em Builds the mouse packet from the bytes read. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{mouse_8h_a38d52a9770ba9b635e98e4968ae7c330}{mouse\+\_\+write\+\_\+command}} (uint8\+\_\+t command)
+\begin{DoxyCompactList}\small\item\em Writes a command to the mouse. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{mouse_8h_ab87bf8ea58c91cb0857fb2ace9247241}\label{mouse_8h_ab87bf8ea58c91cb0857fb2ace9247241}} 
+void \mbox{\hyperlink{mouse_8h_ab87bf8ea58c91cb0857fb2ace9247241}{current\+\_\+mouse\+\_\+position}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current mouse position. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{mouse_8h_ab0b8b8faa87106cfce9eb9d9897f762b}{get\+\_\+current\+\_\+value}} (int value, int delta, int min, int max)
+\begin{DoxyCompactList}\small\item\em Calculates the current value given a delta. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions for handling mouse interrupts and communication. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{mouse_8h_ab0b8b8faa87106cfce9eb9d9897f762b}\label{mouse_8h_ab0b8b8faa87106cfce9eb9d9897f762b}} 
+\index{mouse.h@{mouse.h}!get\_current\_value@{get\_current\_value}}
+\index{get\_current\_value@{get\_current\_value}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{get\_current\_value()}{get\_current\_value()}}
+{\footnotesize\ttfamily int get\+\_\+current\+\_\+value (\begin{DoxyParamCaption}\item[{int}]{value,  }\item[{int}]{delta,  }\item[{int}]{min,  }\item[{int}]{max }\end{DoxyParamCaption})}
+
+
+
+Calculates the current value given a delta. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The initial value. \\
+\hline
+{\em delta} & The change in value. \\
+\hline
+{\em min} & The minimum possible value. \\
+\hline
+{\em max} & The maximum possible value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The updated value within the specified range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mouse_8h_a428eea6851ed11e32b839e5de9438e05}\label{mouse_8h_a428eea6851ed11e32b839e5de9438e05}} 
+\index{mouse.h@{mouse.h}!get\_mouse\_packet@{get\_mouse\_packet}}
+\index{get\_mouse\_packet@{get\_mouse\_packet}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{get\_mouse\_packet()}{get\_mouse\_packet()}}
+{\footnotesize\ttfamily void() get\+\_\+mouse\+\_\+packet (\begin{DoxyParamCaption}\item[{struct packet $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Retrieves the mouse packet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Pointer to the packet structure to store mouse data. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{mouse_8h_a210374b50462acdedab00df64d5cea3c}\label{mouse_8h_a210374b50462acdedab00df64d5cea3c}} 
+\index{mouse.h@{mouse.h}!mouse\_ih@{mouse\_ih}}
+\index{mouse\_ih@{mouse\_ih}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_ih()}{mouse\_ih()}}
+{\footnotesize\ttfamily void() mouse\+\_\+ih (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Mouse interrupt handler. 
+
+Reads the mouse data from the KBC and handles any errors. \mbox{\Hypertarget{mouse_8h_a20285aed4b3ef45812cd967532dd09db}\label{mouse_8h_a20285aed4b3ef45812cd967532dd09db}} 
+\index{mouse.h@{mouse.h}!mouse\_subscribe\_int@{mouse\_subscribe\_int}}
+\index{mouse\_subscribe\_int@{mouse\_subscribe\_int}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_subscribe\_int()}{mouse\_subscribe\_int()}}
+{\footnotesize\ttfamily int() mouse\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{bit\+\_\+no }\end{DoxyParamCaption})}
+
+
+
+Subscribes mouse interrupts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+\_\+no} & Pointer to store the bit number to be set in the mask returned upon an interrupt. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/zero otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mouse_8h_a3ecf823d80520009ae5e0d76ae40a3c3}\label{mouse_8h_a3ecf823d80520009ae5e0d76ae40a3c3}} 
+\index{mouse.h@{mouse.h}!mouse\_unsubscribe\_int@{mouse\_unsubscribe\_int}}
+\index{mouse\_unsubscribe\_int@{mouse\_unsubscribe\_int}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_unsubscribe\_int()}{mouse\_unsubscribe\_int()}}
+{\footnotesize\ttfamily int() mouse\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unsubscribes mouse interrupts. 
+
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/zero otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mouse_8h_a38d52a9770ba9b635e98e4968ae7c330}\label{mouse_8h_a38d52a9770ba9b635e98e4968ae7c330}} 
+\index{mouse.h@{mouse.h}!mouse\_write\_command@{mouse\_write\_command}}
+\index{mouse\_write\_command@{mouse\_write\_command}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_write\_command()}{mouse\_write\_command()}}
+{\footnotesize\ttfamily int() mouse\+\_\+write\+\_\+command (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{command }\end{DoxyParamCaption})}
+
+
+
+Writes a command to the mouse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & The command byte to be written. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/zero otherwise. 
+\end{DoxyReturn}

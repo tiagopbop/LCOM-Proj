@@ -1,0 +1,207 @@
+\hypertarget{game_8h}{}\doxysection{game\+\_\+logic/game.h File Reference}
+\label{game_8h}\index{game\_logic/game.h@{game\_logic/game.h}}
+
+
+Functions and structures for handling game logic.  
+
+
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../drivers/video/video.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../drivers/keyboard\+\_\+and\+\_\+mouse/mouse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../sprites/sprites.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../drivers/serial\+\_\+port/serial\+\_\+port.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../xpms/ships/ship1.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../xpms/ships/ship2\+\_\+h.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../xpms/ships/ship2\+\_\+v.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../xpms/ships/ship3\+\_\+h.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../xpms/ships/ship3\+\_\+v.\+xpm\char`\"{}}\newline
+Include dependency graph for game.\+h\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_s_h_i_p}{SHIP}}
+\begin{DoxyCompactList}\small\item\em Structure representing a ship. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_g_r_i_d___c_e_l_l}{GRID\+\_\+\+CELL}}
+\begin{DoxyCompactList}\small\item\em Structure representing a cell in the game grid. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_g_r_i_d}{GRID}}
+\begin{DoxyCompactList}\small\item\em Structure representing the game grid. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_g_a_m_e}{GAME}}
+\begin{DoxyCompactList}\small\item\em Structure representing the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{game_8h_af2dd343888017e3b61f6d17cf7ab8350}\label{game_8h_af2dd343888017e3b61f6d17cf7ab8350}} 
+enum \mbox{\hyperlink{game_8h_af2dd343888017e3b61f6d17cf7ab8350}{SHIP\+\_\+\+ORIENTATION}} \{ {\bfseries HORIZONTAL}
+, {\bfseries VERTICAL}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration defining the orientation of a ship. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{game_8h_a316a571805cfd19e70698378e72d7b5a}\label{game_8h_a316a571805cfd19e70698378e72d7b5a}} 
+enum \mbox{\hyperlink{game_8h_a316a571805cfd19e70698378e72d7b5a}{CELL\+\_\+\+STATE}} \{ {\bfseries EMPTY}
+, {\bfseries SHIP\+\_\+\+HERE}
+, {\bfseries HIT}
+, {\bfseries MISS}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration defining the state of a cell in the game grid. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{game_8h_ae17167b4820ae1ab30a90efe61788901}\label{game_8h_ae17167b4820ae1ab30a90efe61788901}} 
+enum \mbox{\hyperlink{game_8h_ae17167b4820ae1ab30a90efe61788901}{SHIP\+\_\+\+TYPE}} \{ {\bfseries SHIP1}
+, {\bfseries SHIP2}
+, {\bfseries SHIP3}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration defining the type of ship. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{game_8h_a9777beb4b4305b9a2d5faea650af3b6f}\label{game_8h_a9777beb4b4305b9a2d5faea650af3b6f}} 
+enum \mbox{\hyperlink{game_8h_a9777beb4b4305b9a2d5faea650af3b6f}{GAMEMODE}} \{ {\bfseries GAME\+\_\+\+EDIT\+\_\+\+BOARD}
+, {\bfseries GAME\+\_\+\+EXPECT}
+, {\bfseries GAME\+\_\+\+ATTACK}
+, {\bfseries GAME\+\_\+\+DEFEND}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration defining the game mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{game_8h_a4fafe7abe8f831b458c3e05384a3fff6}\label{game_8h_a4fafe7abe8f831b458c3e05384a3fff6}} 
+enum \mbox{\hyperlink{game_8h_a4fafe7abe8f831b458c3e05384a3fff6}{GAMESTATE}} \{ {\bfseries GAMESTART}
+, {\bfseries GAMEWAIT}
+, {\bfseries GAMEPLAY}
+, {\bfseries GAMEEND}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration defining the game state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{game_8h_ab42f202bc2851eebc0b82349317311b7}{init\+\_\+game}} (\mbox{\hyperlink{struct_g_a_m_e}{GAME}} $\ast$game, int role)
+\begin{DoxyCompactList}\small\item\em Initializes the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8h_a6119ef8139ac5d99d1420b3c471e932c}{draw\+\_\+game}} (\mbox{\hyperlink{struct_g_a_m_e}{GAME}} $\ast$game)
+\begin{DoxyCompactList}\small\item\em Draws the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8h_a869cd9333b85ff4aefc3e55687f90cf4}{handle\+Edit\+Board\+Mouse}} (\mbox{\hyperlink{struct_g_a_m_e}{GAME}} $\ast$game)
+\begin{DoxyCompactList}\small\item\em Handles mouse input for the edit board mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8h_aa803084a308bf3bbd4362c21d901680c}{handle\+Edit\+Board\+KB}} (uint8\+\_\+t scancode, \mbox{\hyperlink{struct_g_a_m_e}{GAME}} $\ast$game)
+\begin{DoxyCompactList}\small\item\em Handles keyboard input for the edit board mode. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game_8h_a181a049616153fbc1a1acc8cb338fc8f}{snap\+\_\+to\+\_\+grid}} (int pos)
+\begin{DoxyCompactList}\small\item\em Snaps the position to the grid. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{game_8h_add43042b1b63067d24091664aa80ab73}{can\+\_\+place\+\_\+ship}} (\mbox{\hyperlink{struct_g_a_m_e}{GAME}} $\ast$game)
+\begin{DoxyCompactList}\small\item\em Checks if a ship can be placed in the current position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8h_a5b5f9622fadc67206af743bee1ba5c0d}{place\+\_\+ship}} (\mbox{\hyperlink{struct_g_a_m_e}{GAME}} $\ast$game)
+\begin{DoxyCompactList}\small\item\em Places a ship on the grid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions and structures for handling game logic. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{game_8h_add43042b1b63067d24091664aa80ab73}\label{game_8h_add43042b1b63067d24091664aa80ab73}} 
+\index{game.h@{game.h}!can\_place\_ship@{can\_place\_ship}}
+\index{can\_place\_ship@{can\_place\_ship}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{can\_place\_ship()}{can\_place\_ship()}}
+{\footnotesize\ttfamily bool can\+\_\+place\+\_\+ship (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_a_m_e}{GAME}} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+Checks if a ship can be placed in the current position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & Pointer to the game structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the ship can be placed, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game_8h_a6119ef8139ac5d99d1420b3c471e932c}\label{game_8h_a6119ef8139ac5d99d1420b3c471e932c}} 
+\index{game.h@{game.h}!draw\_game@{draw\_game}}
+\index{draw\_game@{draw\_game}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{draw\_game()}{draw\_game()}}
+{\footnotesize\ttfamily void draw\+\_\+game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_a_m_e}{GAME}} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+Draws the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & Pointer to the game structure. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{game_8h_aa803084a308bf3bbd4362c21d901680c}\label{game_8h_aa803084a308bf3bbd4362c21d901680c}} 
+\index{game.h@{game.h}!handleEditBoardKB@{handleEditBoardKB}}
+\index{handleEditBoardKB@{handleEditBoardKB}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{handleEditBoardKB()}{handleEditBoardKB()}}
+{\footnotesize\ttfamily void handle\+Edit\+Board\+KB (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{scancode,  }\item[{\mbox{\hyperlink{struct_g_a_m_e}{GAME}} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+Handles keyboard input for the edit board mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scancode} & The scancode received from the keyboard. \\
+\hline
+{\em game} & Pointer to the game structure. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{game_8h_a869cd9333b85ff4aefc3e55687f90cf4}\label{game_8h_a869cd9333b85ff4aefc3e55687f90cf4}} 
+\index{game.h@{game.h}!handleEditBoardMouse@{handleEditBoardMouse}}
+\index{handleEditBoardMouse@{handleEditBoardMouse}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{handleEditBoardMouse()}{handleEditBoardMouse()}}
+{\footnotesize\ttfamily void handle\+Edit\+Board\+Mouse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_a_m_e}{GAME}} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+Handles mouse input for the edit board mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & Pointer to the game structure. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{game_8h_ab42f202bc2851eebc0b82349317311b7}\label{game_8h_ab42f202bc2851eebc0b82349317311b7}} 
+\index{game.h@{game.h}!init\_game@{init\_game}}
+\index{init\_game@{init\_game}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{init\_game()}{init\_game()}}
+{\footnotesize\ttfamily void init\+\_\+game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_a_m_e}{GAME}} $\ast$}]{game,  }\item[{int}]{role }\end{DoxyParamCaption})}
+
+
+
+Initializes the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & Pointer to the game structure. \\
+\hline
+{\em role} & The role of the player. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{game_8h_a5b5f9622fadc67206af743bee1ba5c0d}\label{game_8h_a5b5f9622fadc67206af743bee1ba5c0d}} 
+\index{game.h@{game.h}!place\_ship@{place\_ship}}
+\index{place\_ship@{place\_ship}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{place\_ship()}{place\_ship()}}
+{\footnotesize\ttfamily void place\+\_\+ship (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_a_m_e}{GAME}} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+Places a ship on the grid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & Pointer to the game structure. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{game_8h_a181a049616153fbc1a1acc8cb338fc8f}\label{game_8h_a181a049616153fbc1a1acc8cb338fc8f}} 
+\index{game.h@{game.h}!snap\_to\_grid@{snap\_to\_grid}}
+\index{snap\_to\_grid@{snap\_to\_grid}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{snap\_to\_grid()}{snap\_to\_grid()}}
+{\footnotesize\ttfamily int snap\+\_\+to\+\_\+grid (\begin{DoxyParamCaption}\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Snaps the position to the grid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & The position to snap. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The snapped position. 
+\end{DoxyReturn}

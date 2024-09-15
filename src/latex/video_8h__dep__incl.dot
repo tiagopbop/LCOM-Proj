@@ -1,0 +1,24 @@
+digraph "drivers/video/video.h"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="drivers/video/video.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Functions for handling video mode setting, pixel drawing, and buffer swapping."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="game_logic/accept.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$accept_8h.html",tooltip="Functions and structures for handling user acceptance of invites."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="game_logic/game.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$game_8h.html",tooltip="Functions and structures for handling game logic."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="game_logic/instructions.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$instructions_8h.html",tooltip="Functions and structures for handling game instructions."];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="game_logic/menu.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$menu_8h.html",tooltip="Functions and structures for handling the game menu."];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="game_logic/wait.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$wait_8h.html",tooltip="Functions and structures for handling the waiting screen."];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="sprites/sprites.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sprites_8h.html",tooltip="Functions and structures for handling sprites."];
+  Node7 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+}

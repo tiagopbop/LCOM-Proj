@@ -1,0 +1,85 @@
+\hypertarget{struct_g_a_m_e}{}\doxysection{GAME Struct Reference}
+\label{struct_g_a_m_e}\index{GAME@{GAME}}
+
+
+Structure representing the game.  
+
+
+
+
+{\ttfamily \#include $<$game.\+h$>$}
+
+
+
+Collaboration diagram for GAME\+:
+% FIG 0
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{game_8h_a9777beb4b4305b9a2d5faea650af3b6f}{GAMEMODE}} \mbox{\hyperlink{struct_g_a_m_e_a37211064a9c7834b16db6cc9d3cf8ae2}{player\+\_\+mode}}
+\item 
+\mbox{\hyperlink{game_8h_a4fafe7abe8f831b458c3e05384a3fff6}{GAMESTATE}} \mbox{\hyperlink{struct_g_a_m_e_aa7126c0ab309367e1938d2922d9e1db7}{player\+\_\+state}}
+\item 
+\mbox{\hyperlink{struct_g_r_i_d}{GRID}} \mbox{\hyperlink{struct_g_a_m_e_a81061d2c8bd7228f8c2896f3b377ca2d}{player\+\_\+grid}}
+\item 
+\mbox{\hyperlink{struct_g_r_i_d}{GRID}} \mbox{\hyperlink{struct_g_a_m_e_ae350fa91bfcfba8e06d99f3cb29d78c0}{enemy\+\_\+grid}}
+\item 
+\mbox{\hyperlink{struct_s_h_i_p}{SHIP}} \mbox{\hyperlink{struct_g_a_m_e_acdeeb6192a343cf54f5773252d0a0225}{player\+\_\+ships}} \mbox{[}3\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_g_a_m_e_a1c86e3daf31399bb07d0f15cb465d369}{placed\+\_\+ships}}
+\item 
+int \mbox{\hyperlink{struct_g_a_m_e_ae831c19187633630366dd32d3b8a433e}{role}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure representing the game. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_g_a_m_e_ae350fa91bfcfba8e06d99f3cb29d78c0}\label{struct_g_a_m_e_ae350fa91bfcfba8e06d99f3cb29d78c0}} 
+\index{GAME@{GAME}!enemy\_grid@{enemy\_grid}}
+\index{enemy\_grid@{enemy\_grid}!GAME@{GAME}}
+\doxysubsubsection{\texorpdfstring{enemy\_grid}{enemy\_grid}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_r_i_d}{GRID}} GAME\+::enemy\+\_\+grid}
+
+Grid of the enemy \mbox{\Hypertarget{struct_g_a_m_e_a1c86e3daf31399bb07d0f15cb465d369}\label{struct_g_a_m_e_a1c86e3daf31399bb07d0f15cb465d369}} 
+\index{GAME@{GAME}!placed\_ships@{placed\_ships}}
+\index{placed\_ships@{placed\_ships}!GAME@{GAME}}
+\doxysubsubsection{\texorpdfstring{placed\_ships}{placed\_ships}}
+{\footnotesize\ttfamily int GAME\+::placed\+\_\+ships}
+
+Number of ships placed \mbox{\Hypertarget{struct_g_a_m_e_a81061d2c8bd7228f8c2896f3b377ca2d}\label{struct_g_a_m_e_a81061d2c8bd7228f8c2896f3b377ca2d}} 
+\index{GAME@{GAME}!player\_grid@{player\_grid}}
+\index{player\_grid@{player\_grid}!GAME@{GAME}}
+\doxysubsubsection{\texorpdfstring{player\_grid}{player\_grid}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_r_i_d}{GRID}} GAME\+::player\+\_\+grid}
+
+Grid of the player \mbox{\Hypertarget{struct_g_a_m_e_a37211064a9c7834b16db6cc9d3cf8ae2}\label{struct_g_a_m_e_a37211064a9c7834b16db6cc9d3cf8ae2}} 
+\index{GAME@{GAME}!player\_mode@{player\_mode}}
+\index{player\_mode@{player\_mode}!GAME@{GAME}}
+\doxysubsubsection{\texorpdfstring{player\_mode}{player\_mode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{game_8h_a9777beb4b4305b9a2d5faea650af3b6f}{GAMEMODE}} GAME\+::player\+\_\+mode}
+
+Mode of the player \mbox{\Hypertarget{struct_g_a_m_e_acdeeb6192a343cf54f5773252d0a0225}\label{struct_g_a_m_e_acdeeb6192a343cf54f5773252d0a0225}} 
+\index{GAME@{GAME}!player\_ships@{player\_ships}}
+\index{player\_ships@{player\_ships}!GAME@{GAME}}
+\doxysubsubsection{\texorpdfstring{player\_ships}{player\_ships}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_h_i_p}{SHIP}} GAME\+::player\+\_\+ships\mbox{[}3\mbox{]}}
+
+Ships of the player \mbox{\Hypertarget{struct_g_a_m_e_aa7126c0ab309367e1938d2922d9e1db7}\label{struct_g_a_m_e_aa7126c0ab309367e1938d2922d9e1db7}} 
+\index{GAME@{GAME}!player\_state@{player\_state}}
+\index{player\_state@{player\_state}!GAME@{GAME}}
+\doxysubsubsection{\texorpdfstring{player\_state}{player\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{game_8h_a4fafe7abe8f831b458c3e05384a3fff6}{GAMESTATE}} GAME\+::player\+\_\+state}
+
+State of the player \mbox{\Hypertarget{struct_g_a_m_e_ae831c19187633630366dd32d3b8a433e}\label{struct_g_a_m_e_ae831c19187633630366dd32d3b8a433e}} 
+\index{GAME@{GAME}!role@{role}}
+\index{role@{role}!GAME@{GAME}}
+\doxysubsubsection{\texorpdfstring{role}{role}}
+{\footnotesize\ttfamily int GAME\+::role}
+
+Role of the player 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+game\+\_\+logic/\mbox{\hyperlink{game_8h}{game.\+h}}\end{DoxyCompactItemize}

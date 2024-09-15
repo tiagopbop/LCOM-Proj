@@ -1,0 +1,12 @@
+digraph "draw_mouse"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="draw_mouse",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Draws the mouse cursor at the specified coordinates."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="draw_Sprite",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sprites_8h.html#a7d52c0d77fb2c5969e3c12f4d1ed8ca3",tooltip="Draws a sprite at the specified coordinates."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="color_pixel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$video_8h.html#aa8595e4a1f85ee8884d70a42b3fdb4cb",tooltip="Colors the pixel at the specified position with the given color."];
+}

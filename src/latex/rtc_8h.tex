@@ -1,0 +1,47 @@
+\hypertarget{rtc_8h}{}\doxysection{drivers/rtc/rtc.h File Reference}
+\label{rtc_8h}\index{drivers/rtc/rtc.h@{drivers/rtc/rtc.h}}
+
+
+Functions for handling Real-\/\+Time Clock (RTC) operations.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+Include dependency graph for rtc.\+h\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_r_t_c___time}{RTC\+\_\+\+Time}}
+\begin{DoxyCompactList}\small\item\em Structure to hold the RTC time information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{rtc_8h_a22a6bbe00f651bda39fb988f558472bf}{RTC\+\_\+get\+Time}} (\mbox{\hyperlink{struct_r_t_c___time}{RTC\+\_\+\+Time}} $\ast$time)
+\begin{DoxyCompactList}\small\item\em Retrieves the current time from the RTC. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions for handling Real-\/\+Time Clock (RTC) operations. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{rtc_8h_a22a6bbe00f651bda39fb988f558472bf}\label{rtc_8h_a22a6bbe00f651bda39fb988f558472bf}} 
+\index{rtc.h@{rtc.h}!RTC\_getTime@{RTC\_getTime}}
+\index{RTC\_getTime@{RTC\_getTime}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_getTime()}{RTC\_getTime()}}
+{\footnotesize\ttfamily int RTC\+\_\+get\+Time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_r_t_c___time}{RTC\+\_\+\+Time}} $\ast$}]{time }\end{DoxyParamCaption})}
+
+
+
+Retrieves the current time from the RTC. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Pointer to an \mbox{\hyperlink{struct_r_t_c___time}{RTC\+\_\+\+Time}} structure to store the current time. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/zero otherwise. 
+\end{DoxyReturn}

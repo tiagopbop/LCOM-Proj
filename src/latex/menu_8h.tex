@@ -1,0 +1,179 @@
+\hypertarget{menu_8h}{}\doxysection{game\+\_\+logic/menu.h File Reference}
+\label{menu_8h}\index{game\_logic/menu.h@{game\_logic/menu.h}}
+
+
+Functions and structures for handling the game menu.  
+
+
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../drivers/video/video.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../drivers/keyboard\+\_\+and\+\_\+mouse/mouse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../drivers/serial\+\_\+port/serial\+\_\+port.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../sprites/sprites.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../xpms/menu\+\_\+options/start.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../xpms/menu\+\_\+options/inst.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../xpms/menu\+\_\+options/exit.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../xpms/menu\+\_\+options/start\+\_\+highlight.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../xpms/menu\+\_\+options/inst\+\_\+highlight.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../xpms/menu\+\_\+options/exit\+\_\+highlight.\+xpm\char`\"{}}\newline
+Include dependency graph for menu.\+h\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_menu_option}{Menu\+Option}}
+\begin{DoxyCompactList}\small\item\em Structure representing an option in the game menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{menu_8h_a065fd150229093fe9a73619052df691c}{INVITER}}~1
+\begin{DoxyCompactList}\small\item\em Role identifiers for game players. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{menu_8h_a117089369cff6a2e204d13a5cbb131de}{INVITEE}}~2
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{menu_8h_a23e47f88d1684df04698b186c3eacb06}{MENU\+\_\+\+OPTION}} \{ \mbox{\hyperlink{menu_8h_a23e47f88d1684df04698b186c3eacb06accab244294e0e1bcded736405b2db375}{START\+\_\+\+GAME}}
+, \mbox{\hyperlink{menu_8h_a23e47f88d1684df04698b186c3eacb06a0ceb6de522b455ec849e32dd48778963}{ENTER\+\_\+\+INSTRUCTIONS}}
+, \mbox{\hyperlink{menu_8h_a23e47f88d1684df04698b186c3eacb06a4bf4cbde18067e0600c7c8a7a30ba316}{EXIT\+\_\+\+GAME}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration representing the menu options. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{menu_8h_a5cf20cf8f8b8d7c2aeaaea014d157583}\label{menu_8h_a5cf20cf8f8b8d7c2aeaaea014d157583}} 
+void \mbox{\hyperlink{menu_8h_a5cf20cf8f8b8d7c2aeaaea014d157583}{init\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the game menu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{menu_8h_a8b6c981db3aad686de04545c1e87f33c}\label{menu_8h_a8b6c981db3aad686de04545c1e87f33c}} 
+void \mbox{\hyperlink{menu_8h_a8b6c981db3aad686de04545c1e87f33c}{draw\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Draws the game menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8h_a5e4452a7253716b5df131026099ac543}{menu\+KB}} (uint8\+\_\+t scancode)
+\begin{DoxyCompactList}\small\item\em Handles keyboard input for the game menu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{menu_8h_a69a45e8790f191abb2722ab9ee01f10f}\label{menu_8h_a69a45e8790f191abb2722ab9ee01f10f}} 
+void \mbox{\hyperlink{menu_8h_a69a45e8790f191abb2722ab9ee01f10f}{menu\+Mouse}} ()
+\begin{DoxyCompactList}\small\item\em Handles mouse input for the game menu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{menu_8h_a23e47f88d1684df04698b186c3eacb06}{MENU\+\_\+\+OPTION}} \mbox{\hyperlink{menu_8h_a4cf968086a614408c05e439f2d85ed0e}{mouse\+\_\+hover\+\_\+option}} ()
+\begin{DoxyCompactList}\small\item\em Determines which menu option the mouse is hovering over. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8h_ac9bd321d9b3a19312e807cf0e8db1bb7}{select\+\_\+option}} (\mbox{\hyperlink{menu_8h_a23e47f88d1684df04698b186c3eacb06}{MENU\+\_\+\+OPTION}} option)
+\begin{DoxyCompactList}\small\item\em Selects a menu option. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8h_a186cdf14b220ba5e5a24a4ba1a226a90}{highlight\+\_\+option}} (\mbox{\hyperlink{menu_8h_a23e47f88d1684df04698b186c3eacb06}{MENU\+\_\+\+OPTION}} option)
+\begin{DoxyCompactList}\small\item\em Highlights a menu option. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{menu_8h_a046a9f954c79fb08f08d90305dbed8c3}\label{menu_8h_a046a9f954c79fb08f08d90305dbed8c3}} 
+void \mbox{\hyperlink{menu_8h_a046a9f954c79fb08f08d90305dbed8c3}{delete\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Deletes the game menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions and structures for handling the game menu. 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{menu_8h_a117089369cff6a2e204d13a5cbb131de}\label{menu_8h_a117089369cff6a2e204d13a5cbb131de}} 
+\index{menu.h@{menu.h}!INVITEE@{INVITEE}}
+\index{INVITEE@{INVITEE}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{INVITEE}{INVITEE}}
+{\footnotesize\ttfamily \#define INVITEE~2}
+
+Invitee player role \mbox{\Hypertarget{menu_8h_a065fd150229093fe9a73619052df691c}\label{menu_8h_a065fd150229093fe9a73619052df691c}} 
+\index{menu.h@{menu.h}!INVITER@{INVITER}}
+\index{INVITER@{INVITER}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{INVITER}{INVITER}}
+{\footnotesize\ttfamily \#define INVITER~1}
+
+
+
+Role identifiers for game players. 
+
+Inviter player role 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{menu_8h_a23e47f88d1684df04698b186c3eacb06}\label{menu_8h_a23e47f88d1684df04698b186c3eacb06}} 
+\index{menu.h@{menu.h}!MENU\_OPTION@{MENU\_OPTION}}
+\index{MENU\_OPTION@{MENU\_OPTION}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{MENU\_OPTION}{MENU\_OPTION}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{menu_8h_a23e47f88d1684df04698b186c3eacb06}{MENU\+\_\+\+OPTION}}}
+
+
+
+Enumeration representing the menu options. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{START\_GAME@{START\_GAME}!menu.h@{menu.h}}\index{menu.h@{menu.h}!START\_GAME@{START\_GAME}}}\mbox{\Hypertarget{menu_8h_a23e47f88d1684df04698b186c3eacb06accab244294e0e1bcded736405b2db375}\label{menu_8h_a23e47f88d1684df04698b186c3eacb06accab244294e0e1bcded736405b2db375}} 
+START\+\_\+\+GAME&Start game option \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ENTER\_INSTRUCTIONS@{ENTER\_INSTRUCTIONS}!menu.h@{menu.h}}\index{menu.h@{menu.h}!ENTER\_INSTRUCTIONS@{ENTER\_INSTRUCTIONS}}}\mbox{\Hypertarget{menu_8h_a23e47f88d1684df04698b186c3eacb06a0ceb6de522b455ec849e32dd48778963}\label{menu_8h_a23e47f88d1684df04698b186c3eacb06a0ceb6de522b455ec849e32dd48778963}} 
+ENTER\+\_\+\+INSTRUCTIONS&Enter instructions option \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EXIT\_GAME@{EXIT\_GAME}!menu.h@{menu.h}}\index{menu.h@{menu.h}!EXIT\_GAME@{EXIT\_GAME}}}\mbox{\Hypertarget{menu_8h_a23e47f88d1684df04698b186c3eacb06a4bf4cbde18067e0600c7c8a7a30ba316}\label{menu_8h_a23e47f88d1684df04698b186c3eacb06a4bf4cbde18067e0600c7c8a7a30ba316}} 
+EXIT\+\_\+\+GAME&Exit game option \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{menu_8h_a186cdf14b220ba5e5a24a4ba1a226a90}\label{menu_8h_a186cdf14b220ba5e5a24a4ba1a226a90}} 
+\index{menu.h@{menu.h}!highlight\_option@{highlight\_option}}
+\index{highlight\_option@{highlight\_option}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{highlight\_option()}{highlight\_option()}}
+{\footnotesize\ttfamily void highlight\+\_\+option (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{menu_8h_a23e47f88d1684df04698b186c3eacb06}{MENU\+\_\+\+OPTION}}}]{option }\end{DoxyParamCaption})}
+
+
+
+Highlights a menu option. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em option} & The menu option to be highlighted. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{menu_8h_a5e4452a7253716b5df131026099ac543}\label{menu_8h_a5e4452a7253716b5df131026099ac543}} 
+\index{menu.h@{menu.h}!menuKB@{menuKB}}
+\index{menuKB@{menuKB}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{menuKB()}{menuKB()}}
+{\footnotesize\ttfamily void menu\+KB (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{scancode }\end{DoxyParamCaption})}
+
+
+
+Handles keyboard input for the game menu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scancode} & The scancode received from the keyboard. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{menu_8h_a4cf968086a614408c05e439f2d85ed0e}\label{menu_8h_a4cf968086a614408c05e439f2d85ed0e}} 
+\index{menu.h@{menu.h}!mouse\_hover\_option@{mouse\_hover\_option}}
+\index{mouse\_hover\_option@{mouse\_hover\_option}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_hover\_option()}{mouse\_hover\_option()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{menu_8h_a23e47f88d1684df04698b186c3eacb06}{MENU\+\_\+\+OPTION}} mouse\+\_\+hover\+\_\+option (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Determines which menu option the mouse is hovering over. 
+
+\begin{DoxyReturn}{Returns}
+The menu option currently hovered by the mouse. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{menu_8h_ac9bd321d9b3a19312e807cf0e8db1bb7}\label{menu_8h_ac9bd321d9b3a19312e807cf0e8db1bb7}} 
+\index{menu.h@{menu.h}!select\_option@{select\_option}}
+\index{select\_option@{select\_option}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{select\_option()}{select\_option()}}
+{\footnotesize\ttfamily void select\+\_\+option (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{menu_8h_a23e47f88d1684df04698b186c3eacb06}{MENU\+\_\+\+OPTION}}}]{option }\end{DoxyParamCaption})}
+
+
+
+Selects a menu option. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em option} & The menu option to be selected. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 2

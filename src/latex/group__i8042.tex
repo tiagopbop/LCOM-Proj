@@ -1,0 +1,260 @@
+\hypertarget{group__i8042}{}\doxysection{i8042}
+\label{group__i8042}\index{i8042@{i8042}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__i8042_ga5c1072213ce8d8cd43628c4319ae0391}{KBD\+\_\+\+IRQ}}~1
+\item 
+\#define \mbox{\hyperlink{group__i8042_ga85964cb90343bb1a029b1d1b4229f910}{MOUSE\+\_\+\+IRQ}}~12
+\item 
+\#define \mbox{\hyperlink{group__i8042_ga45967c9e25447ba853cf6fb4ac545fe6}{OBF}}~BIT(0)
+\item 
+\#define \mbox{\hyperlink{group__i8042_ga3c48b10907056351582baf9f6478598e}{IBF}}~BIT(1)
+\item 
+\#define \mbox{\hyperlink{group__i8042_ga45ba202b05caf39795aeca91b0ae547e}{TIMEOUT}}~BIT(6)
+\item 
+\#define \mbox{\hyperlink{group__i8042_gaf6996d12e71a534569c41a25de7d6d52}{PARITY}}~BIT(7)
+\item 
+\#define \mbox{\hyperlink{group__i8042_gac6b47609a951e77244ef2be1691c298a}{BREAK\+\_\+\+CODE}}~BIT(7)
+\item 
+\#define \mbox{\hyperlink{group__i8042_ga69b1626cd295acf4cf3f8e284205b9db}{ESC\+\_\+\+BREAKCODE}}~0x81
+\item 
+\#define \mbox{\hyperlink{group__i8042_ga34b14687d83496940a236351fbbb1aea}{KBC\+\_\+\+STAT\+\_\+\+REG}}~0x64
+\item 
+\#define \mbox{\hyperlink{group__i8042_ga6d57c7927a10f638c83046b52c8caac9}{KBC\+\_\+\+CMD\+\_\+\+REG}}~0x64
+\item 
+\#define \mbox{\hyperlink{group__i8042_ga3654ed0eea090843386f34315fe66fc2}{KBC\+\_\+\+OBF\+\_\+\+REG}}~0x60
+\item 
+\#define \mbox{\hyperlink{group__i8042_ga148d256cbb2300ef79cfa1f659328470}{KBC\+\_\+\+RCB}}~0x20
+\item 
+\#define \mbox{\hyperlink{group__i8042_ga952b75b0fb65e182d7b26afe8f0c43ca}{KBC\+\_\+\+WCB}}~0x60
+\item 
+\#define \mbox{\hyperlink{group__i8042_ga75f52e1e4d1b4a5ebc175f18fb94687d}{ENABLE\+\_\+\+KEYBOARD\+\_\+\+INT}}~BIT(0)
+\item 
+\#define \mbox{\hyperlink{group__i8042_ga81c0f94add844b0761bd142f7f708431}{MOUSE\+\_\+\+LB}}~BIT(0)
+\item 
+\#define \mbox{\hyperlink{group__i8042_ga5f47c1d60579c8691054c939c1d7c20e}{MOUSE\+\_\+\+RB}}~BIT(1)
+\item 
+\#define \mbox{\hyperlink{group__i8042_ga5a934eaadd3536aabe6df0adf6728e8e}{MOUSE\+\_\+\+MB}}~BIT(2)
+\item 
+\#define \mbox{\hyperlink{group__i8042_ga553a124e1d5855773c74cb5561dec040}{CONTROL}}~BIT(3)
+\item 
+\#define \mbox{\hyperlink{group__i8042_gacd43b7d72e2f4da511b0f8a73df0fe79}{MOUSE\+\_\+\+X\+\_\+\+SIGN}}~BIT(4)
+\item 
+\#define \mbox{\hyperlink{group__i8042_gae0f95694f6f137fcae25644972556873}{MOUSE\+\_\+\+Y\+\_\+\+SIGN}}~BIT(5)
+\item 
+\#define \mbox{\hyperlink{group__i8042_ga0663715bb53ecaf279ac3c18906e8bc6}{MOUSE\+\_\+\+X\+\_\+\+OVF}}~BIT(6)
+\item 
+\#define \mbox{\hyperlink{group__i8042_ga637f5d5ecc9244806ca437d9b4f88c7b}{MOUSE\+\_\+\+Y\+\_\+\+OVF}}~BIT(7)
+\item 
+\#define \mbox{\hyperlink{group__i8042_ga4be090dd23e1af6cf8e2dc17c6b08cf7}{EXTEND}}(byte)~(0x\+FF00 $\vert$ (byte))
+\item 
+\#define \mbox{\hyperlink{group__i8042_ga9c64a38cca5c7aabe0ab2d8c5e21e723}{ENABLE\+\_\+\+DATA\+\_\+\+REPORTING}}~0x\+F4
+\item 
+\#define \mbox{\hyperlink{group__i8042_ga8e51dfaa390f8cfb4b1b286fb3b22aff}{DISABLE\+\_\+\+DATA\+\_\+\+REPORTING}}~0x\+F5
+\item 
+\#define \mbox{\hyperlink{group__i8042_ga0fcdbd39ed7dcf62fede44082d09cb7a}{WRITE\+\_\+\+BYTE\+\_\+\+TO\+\_\+\+MOUSE}}~0x\+D4
+\item 
+\#define \mbox{\hyperlink{group__i8042_ga6f6489887e08bff4887d0bc5dcf214d8}{ACK}}~0x\+FA
+\item 
+\#define \mbox{\hyperlink{group__i8042_ga958518a45b12053ae33606ee7cb68a55}{NACK}}~0x\+FE
+\item 
+\#define \mbox{\hyperlink{group__i8042_ga75ebb9e8d0615febfa6c7c96ad48a38b}{MOUSE\+\_\+\+ERROR}}~0x\+FC
+\item 
+\#define \mbox{\hyperlink{group__i8042_ga62249e384b997229a3e2ae74ade334e2}{DELAY}}~20000
+\item 
+\#define \mbox{\hyperlink{group__i8042_gafd63d23830ad86d01b6fff2e6c615f7e}{MAX\+\_\+\+TRIES}}~10
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Constants for programming the i8042 Keyboard Controller. 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__i8042_ga6f6489887e08bff4887d0bc5dcf214d8}\label{group__i8042_ga6f6489887e08bff4887d0bc5dcf214d8}} 
+\index{i8042@{i8042}!ACK@{ACK}}
+\index{ACK@{ACK}!i8042@{i8042}}
+\doxysubsubsection{\texorpdfstring{ACK}{ACK}}
+{\footnotesize\ttfamily \#define ACK~0x\+FA}
+
+Acknowledgement\+: everything is ok \mbox{\Hypertarget{group__i8042_gac6b47609a951e77244ef2be1691c298a}\label{group__i8042_gac6b47609a951e77244ef2be1691c298a}} 
+\index{i8042@{i8042}!BREAK\_CODE@{BREAK\_CODE}}
+\index{BREAK\_CODE@{BREAK\_CODE}!i8042@{i8042}}
+\doxysubsubsection{\texorpdfstring{BREAK\_CODE}{BREAK\_CODE}}
+{\footnotesize\ttfamily \#define BREAK\+\_\+\+CODE~BIT(7)}
+
+Break code\+: when (\&) -\/$>$ 1 if break code, 0 if make code \mbox{\Hypertarget{group__i8042_ga553a124e1d5855773c74cb5561dec040}\label{group__i8042_ga553a124e1d5855773c74cb5561dec040}} 
+\index{i8042@{i8042}!CONTROL@{CONTROL}}
+\index{CONTROL@{CONTROL}!i8042@{i8042}}
+\doxysubsubsection{\texorpdfstring{CONTROL}{CONTROL}}
+{\footnotesize\ttfamily \#define CONTROL~BIT(3)}
+
+Used to check if bit 3 is set to verify the potential first byte read \mbox{\Hypertarget{group__i8042_ga62249e384b997229a3e2ae74ade334e2}\label{group__i8042_ga62249e384b997229a3e2ae74ade334e2}} 
+\index{i8042@{i8042}!DELAY@{DELAY}}
+\index{DELAY@{DELAY}!i8042@{i8042}}
+\doxysubsubsection{\texorpdfstring{DELAY}{DELAY}}
+{\footnotesize\ttfamily \#define DELAY~20000}
+
+Delay in microseconds \mbox{\Hypertarget{group__i8042_ga8e51dfaa390f8cfb4b1b286fb3b22aff}\label{group__i8042_ga8e51dfaa390f8cfb4b1b286fb3b22aff}} 
+\index{i8042@{i8042}!DISABLE\_DATA\_REPORTING@{DISABLE\_DATA\_REPORTING}}
+\index{DISABLE\_DATA\_REPORTING@{DISABLE\_DATA\_REPORTING}!i8042@{i8042}}
+\doxysubsubsection{\texorpdfstring{DISABLE\_DATA\_REPORTING}{DISABLE\_DATA\_REPORTING}}
+{\footnotesize\ttfamily \#define DISABLE\+\_\+\+DATA\+\_\+\+REPORTING~0x\+F5}
+
+Disable data reporting command \mbox{\Hypertarget{group__i8042_ga9c64a38cca5c7aabe0ab2d8c5e21e723}\label{group__i8042_ga9c64a38cca5c7aabe0ab2d8c5e21e723}} 
+\index{i8042@{i8042}!ENABLE\_DATA\_REPORTING@{ENABLE\_DATA\_REPORTING}}
+\index{ENABLE\_DATA\_REPORTING@{ENABLE\_DATA\_REPORTING}!i8042@{i8042}}
+\doxysubsubsection{\texorpdfstring{ENABLE\_DATA\_REPORTING}{ENABLE\_DATA\_REPORTING}}
+{\footnotesize\ttfamily \#define ENABLE\+\_\+\+DATA\+\_\+\+REPORTING~0x\+F4}
+
+Enable data reporting command \mbox{\Hypertarget{group__i8042_ga75f52e1e4d1b4a5ebc175f18fb94687d}\label{group__i8042_ga75f52e1e4d1b4a5ebc175f18fb94687d}} 
+\index{i8042@{i8042}!ENABLE\_KEYBOARD\_INT@{ENABLE\_KEYBOARD\_INT}}
+\index{ENABLE\_KEYBOARD\_INT@{ENABLE\_KEYBOARD\_INT}!i8042@{i8042}}
+\doxysubsubsection{\texorpdfstring{ENABLE\_KEYBOARD\_INT}{ENABLE\_KEYBOARD\_INT}}
+{\footnotesize\ttfamily \#define ENABLE\+\_\+\+KEYBOARD\+\_\+\+INT~BIT(0)}
+
+Enable keyboard interrupts \mbox{\Hypertarget{group__i8042_ga69b1626cd295acf4cf3f8e284205b9db}\label{group__i8042_ga69b1626cd295acf4cf3f8e284205b9db}} 
+\index{i8042@{i8042}!ESC\_BREAKCODE@{ESC\_BREAKCODE}}
+\index{ESC\_BREAKCODE@{ESC\_BREAKCODE}!i8042@{i8042}}
+\doxysubsubsection{\texorpdfstring{ESC\_BREAKCODE}{ESC\_BREAKCODE}}
+{\footnotesize\ttfamily \#define ESC\+\_\+\+BREAKCODE~0x81}
+
+Escape break code\+: useful for exit condition \mbox{\Hypertarget{group__i8042_ga4be090dd23e1af6cf8e2dc17c6b08cf7}\label{group__i8042_ga4be090dd23e1af6cf8e2dc17c6b08cf7}} 
+\index{i8042@{i8042}!EXTEND@{EXTEND}}
+\index{EXTEND@{EXTEND}!i8042@{i8042}}
+\doxysubsubsection{\texorpdfstring{EXTEND}{EXTEND}}
+{\footnotesize\ttfamily \#define EXTEND(\begin{DoxyParamCaption}\item[{}]{byte }\end{DoxyParamCaption})~(0x\+FF00 $\vert$ (byte))}
+
+Extend sign (1\textquotesingle{}s) to 16 bits if X or Y sign are set \mbox{\Hypertarget{group__i8042_ga3c48b10907056351582baf9f6478598e}\label{group__i8042_ga3c48b10907056351582baf9f6478598e}} 
+\index{i8042@{i8042}!IBF@{IBF}}
+\index{IBF@{IBF}!i8042@{i8042}}
+\doxysubsubsection{\texorpdfstring{IBF}{IBF}}
+{\footnotesize\ttfamily \#define IBF~BIT(1)}
+
+Input buffer full\+: 1 when full (don\textquotesingle{}t write), 0 when empty \mbox{\Hypertarget{group__i8042_ga6d57c7927a10f638c83046b52c8caac9}\label{group__i8042_ga6d57c7927a10f638c83046b52c8caac9}} 
+\index{i8042@{i8042}!KBC\_CMD\_REG@{KBC\_CMD\_REG}}
+\index{KBC\_CMD\_REG@{KBC\_CMD\_REG}!i8042@{i8042}}
+\doxysubsubsection{\texorpdfstring{KBC\_CMD\_REG}{KBC\_CMD\_REG}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+CMD\+\_\+\+REG~0x64}
+
+Input Buffer write commands to KBC \mbox{\Hypertarget{group__i8042_ga3654ed0eea090843386f34315fe66fc2}\label{group__i8042_ga3654ed0eea090843386f34315fe66fc2}} 
+\index{i8042@{i8042}!KBC\_OBF\_REG@{KBC\_OBF\_REG}}
+\index{KBC\_OBF\_REG@{KBC\_OBF\_REG}!i8042@{i8042}}
+\doxysubsubsection{\texorpdfstring{KBC\_OBF\_REG}{KBC\_OBF\_REG}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+OBF\+\_\+\+REG~0x60}
+
+Output Buffer to read scancodes and return values from KBC commands \mbox{\Hypertarget{group__i8042_ga148d256cbb2300ef79cfa1f659328470}\label{group__i8042_ga148d256cbb2300ef79cfa1f659328470}} 
+\index{i8042@{i8042}!KBC\_RCB@{KBC\_RCB}}
+\index{KBC\_RCB@{KBC\_RCB}!i8042@{i8042}}
+\doxysubsubsection{\texorpdfstring{KBC\_RCB}{KBC\_RCB}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+RCB~0x20}
+
+Read Command Byte \mbox{\Hypertarget{group__i8042_ga34b14687d83496940a236351fbbb1aea}\label{group__i8042_ga34b14687d83496940a236351fbbb1aea}} 
+\index{i8042@{i8042}!KBC\_STAT\_REG@{KBC\_STAT\_REG}}
+\index{KBC\_STAT\_REG@{KBC\_STAT\_REG}!i8042@{i8042}}
+\doxysubsubsection{\texorpdfstring{KBC\_STAT\_REG}{KBC\_STAT\_REG}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+STAT\+\_\+\+REG~0x64}
+
+Status Register (read KBC state) \mbox{\Hypertarget{group__i8042_ga952b75b0fb65e182d7b26afe8f0c43ca}\label{group__i8042_ga952b75b0fb65e182d7b26afe8f0c43ca}} 
+\index{i8042@{i8042}!KBC\_WCB@{KBC\_WCB}}
+\index{KBC\_WCB@{KBC\_WCB}!i8042@{i8042}}
+\doxysubsubsection{\texorpdfstring{KBC\_WCB}{KBC\_WCB}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+WCB~0x60}
+
+Write Command Byte \mbox{\Hypertarget{group__i8042_ga5c1072213ce8d8cd43628c4319ae0391}\label{group__i8042_ga5c1072213ce8d8cd43628c4319ae0391}} 
+\index{i8042@{i8042}!KBD\_IRQ@{KBD\_IRQ}}
+\index{KBD\_IRQ@{KBD\_IRQ}!i8042@{i8042}}
+\doxysubsubsection{\texorpdfstring{KBD\_IRQ}{KBD\_IRQ}}
+{\footnotesize\ttfamily \#define KBD\+\_\+\+IRQ~1}
+
+Keyboard IRQ line \mbox{\Hypertarget{group__i8042_gafd63d23830ad86d01b6fff2e6c615f7e}\label{group__i8042_gafd63d23830ad86d01b6fff2e6c615f7e}} 
+\index{i8042@{i8042}!MAX\_TRIES@{MAX\_TRIES}}
+\index{MAX\_TRIES@{MAX\_TRIES}!i8042@{i8042}}
+\doxysubsubsection{\texorpdfstring{MAX\_TRIES}{MAX\_TRIES}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+TRIES~10}
+
+Maximum number of tries \mbox{\Hypertarget{group__i8042_ga75ebb9e8d0615febfa6c7c96ad48a38b}\label{group__i8042_ga75ebb9e8d0615febfa6c7c96ad48a38b}} 
+\index{i8042@{i8042}!MOUSE\_ERROR@{MOUSE\_ERROR}}
+\index{MOUSE\_ERROR@{MOUSE\_ERROR}!i8042@{i8042}}
+\doxysubsubsection{\texorpdfstring{MOUSE\_ERROR}{MOUSE\_ERROR}}
+{\footnotesize\ttfamily \#define MOUSE\+\_\+\+ERROR~0x\+FC}
+
+Mouse error\+: second consecutive invalid byte \mbox{\Hypertarget{group__i8042_ga85964cb90343bb1a029b1d1b4229f910}\label{group__i8042_ga85964cb90343bb1a029b1d1b4229f910}} 
+\index{i8042@{i8042}!MOUSE\_IRQ@{MOUSE\_IRQ}}
+\index{MOUSE\_IRQ@{MOUSE\_IRQ}!i8042@{i8042}}
+\doxysubsubsection{\texorpdfstring{MOUSE\_IRQ}{MOUSE\_IRQ}}
+{\footnotesize\ttfamily \#define MOUSE\+\_\+\+IRQ~12}
+
+Mouse IRQ line \mbox{\Hypertarget{group__i8042_ga81c0f94add844b0761bd142f7f708431}\label{group__i8042_ga81c0f94add844b0761bd142f7f708431}} 
+\index{i8042@{i8042}!MOUSE\_LB@{MOUSE\_LB}}
+\index{MOUSE\_LB@{MOUSE\_LB}!i8042@{i8042}}
+\doxysubsubsection{\texorpdfstring{MOUSE\_LB}{MOUSE\_LB}}
+{\footnotesize\ttfamily \#define MOUSE\+\_\+\+LB~BIT(0)}
+
+Left button was pressed\+: 1 if pressed \mbox{\Hypertarget{group__i8042_ga5a934eaadd3536aabe6df0adf6728e8e}\label{group__i8042_ga5a934eaadd3536aabe6df0adf6728e8e}} 
+\index{i8042@{i8042}!MOUSE\_MB@{MOUSE\_MB}}
+\index{MOUSE\_MB@{MOUSE\_MB}!i8042@{i8042}}
+\doxysubsubsection{\texorpdfstring{MOUSE\_MB}{MOUSE\_MB}}
+{\footnotesize\ttfamily \#define MOUSE\+\_\+\+MB~BIT(2)}
+
+Middle button was pressed\+: 1 if pressed \mbox{\Hypertarget{group__i8042_ga5f47c1d60579c8691054c939c1d7c20e}\label{group__i8042_ga5f47c1d60579c8691054c939c1d7c20e}} 
+\index{i8042@{i8042}!MOUSE\_RB@{MOUSE\_RB}}
+\index{MOUSE\_RB@{MOUSE\_RB}!i8042@{i8042}}
+\doxysubsubsection{\texorpdfstring{MOUSE\_RB}{MOUSE\_RB}}
+{\footnotesize\ttfamily \#define MOUSE\+\_\+\+RB~BIT(1)}
+
+Right button was pressed\+: 1 if pressed \mbox{\Hypertarget{group__i8042_ga0663715bb53ecaf279ac3c18906e8bc6}\label{group__i8042_ga0663715bb53ecaf279ac3c18906e8bc6}} 
+\index{i8042@{i8042}!MOUSE\_X\_OVF@{MOUSE\_X\_OVF}}
+\index{MOUSE\_X\_OVF@{MOUSE\_X\_OVF}!i8042@{i8042}}
+\doxysubsubsection{\texorpdfstring{MOUSE\_X\_OVF}{MOUSE\_X\_OVF}}
+{\footnotesize\ttfamily \#define MOUSE\+\_\+\+X\+\_\+\+OVF~BIT(6)}
+
+Overflow in the registered X movement\+: 1 if overflow \mbox{\Hypertarget{group__i8042_gacd43b7d72e2f4da511b0f8a73df0fe79}\label{group__i8042_gacd43b7d72e2f4da511b0f8a73df0fe79}} 
+\index{i8042@{i8042}!MOUSE\_X\_SIGN@{MOUSE\_X\_SIGN}}
+\index{MOUSE\_X\_SIGN@{MOUSE\_X\_SIGN}!i8042@{i8042}}
+\doxysubsubsection{\texorpdfstring{MOUSE\_X\_SIGN}{MOUSE\_X\_SIGN}}
+{\footnotesize\ttfamily \#define MOUSE\+\_\+\+X\+\_\+\+SIGN~BIT(4)}
+
+X movement is negative\+: 1 if negative \mbox{\Hypertarget{group__i8042_ga637f5d5ecc9244806ca437d9b4f88c7b}\label{group__i8042_ga637f5d5ecc9244806ca437d9b4f88c7b}} 
+\index{i8042@{i8042}!MOUSE\_Y\_OVF@{MOUSE\_Y\_OVF}}
+\index{MOUSE\_Y\_OVF@{MOUSE\_Y\_OVF}!i8042@{i8042}}
+\doxysubsubsection{\texorpdfstring{MOUSE\_Y\_OVF}{MOUSE\_Y\_OVF}}
+{\footnotesize\ttfamily \#define MOUSE\+\_\+\+Y\+\_\+\+OVF~BIT(7)}
+
+Overflow in the registered Y movement\+: 1 if overflow \mbox{\Hypertarget{group__i8042_gae0f95694f6f137fcae25644972556873}\label{group__i8042_gae0f95694f6f137fcae25644972556873}} 
+\index{i8042@{i8042}!MOUSE\_Y\_SIGN@{MOUSE\_Y\_SIGN}}
+\index{MOUSE\_Y\_SIGN@{MOUSE\_Y\_SIGN}!i8042@{i8042}}
+\doxysubsubsection{\texorpdfstring{MOUSE\_Y\_SIGN}{MOUSE\_Y\_SIGN}}
+{\footnotesize\ttfamily \#define MOUSE\+\_\+\+Y\+\_\+\+SIGN~BIT(5)}
+
+Y movement is negative\+: 1 if negative \mbox{\Hypertarget{group__i8042_ga958518a45b12053ae33606ee7cb68a55}\label{group__i8042_ga958518a45b12053ae33606ee7cb68a55}} 
+\index{i8042@{i8042}!NACK@{NACK}}
+\index{NACK@{NACK}!i8042@{i8042}}
+\doxysubsubsection{\texorpdfstring{NACK}{NACK}}
+{\footnotesize\ttfamily \#define NACK~0x\+FE}
+
+Non-\/acknowledgement\+: invalid byte \mbox{\Hypertarget{group__i8042_ga45967c9e25447ba853cf6fb4ac545fe6}\label{group__i8042_ga45967c9e25447ba853cf6fb4ac545fe6}} 
+\index{i8042@{i8042}!OBF@{OBF}}
+\index{OBF@{OBF}!i8042@{i8042}}
+\doxysubsubsection{\texorpdfstring{OBF}{OBF}}
+{\footnotesize\ttfamily \#define OBF~BIT(0)}
+
+Output buffer full\+: 1 when full (available for read), 0 when empty \mbox{\Hypertarget{group__i8042_gaf6996d12e71a534569c41a25de7d6d52}\label{group__i8042_gaf6996d12e71a534569c41a25de7d6d52}} 
+\index{i8042@{i8042}!PARITY@{PARITY}}
+\index{PARITY@{PARITY}!i8042@{i8042}}
+\doxysubsubsection{\texorpdfstring{PARITY}{PARITY}}
+{\footnotesize\ttfamily \#define PARITY~BIT(7)}
+
+Parity error\+: 1 if parity error, 0 otherwise \mbox{\Hypertarget{group__i8042_ga45ba202b05caf39795aeca91b0ae547e}\label{group__i8042_ga45ba202b05caf39795aeca91b0ae547e}} 
+\index{i8042@{i8042}!TIMEOUT@{TIMEOUT}}
+\index{TIMEOUT@{TIMEOUT}!i8042@{i8042}}
+\doxysubsubsection{\texorpdfstring{TIMEOUT}{TIMEOUT}}
+{\footnotesize\ttfamily \#define TIMEOUT~BIT(6)}
+
+Timeout error\+: 1 if timeout error, 0 otherwise \mbox{\Hypertarget{group__i8042_ga0fcdbd39ed7dcf62fede44082d09cb7a}\label{group__i8042_ga0fcdbd39ed7dcf62fede44082d09cb7a}} 
+\index{i8042@{i8042}!WRITE\_BYTE\_TO\_MOUSE@{WRITE\_BYTE\_TO\_MOUSE}}
+\index{WRITE\_BYTE\_TO\_MOUSE@{WRITE\_BYTE\_TO\_MOUSE}!i8042@{i8042}}
+\doxysubsubsection{\texorpdfstring{WRITE\_BYTE\_TO\_MOUSE}{WRITE\_BYTE\_TO\_MOUSE}}
+{\footnotesize\ttfamily \#define WRITE\+\_\+\+BYTE\+\_\+\+TO\+\_\+\+MOUSE~0x\+D4}
+
+Write byte to mouse command 

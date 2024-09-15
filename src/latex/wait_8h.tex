@@ -1,0 +1,62 @@
+\hypertarget{wait_8h}{}\doxysection{game\+\_\+logic/wait.h File Reference}
+\label{wait_8h}\index{game\_logic/wait.h@{game\_logic/wait.h}}
+
+
+Functions and structures for handling the waiting screen.  
+
+
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../drivers/video/video.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../drivers/keyboard\+\_\+and\+\_\+mouse/mouse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../sprites/sprites.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../xpms/wait\+\_\+options/gobackwait.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../xpms/wait\+\_\+options/gobackwait\+\_\+highlight.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../xpms/wait\+\_\+screens/waiting\+\_\+for\+\_\+player.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../drivers/serial\+\_\+port/serial\+\_\+port.\+h\char`\"{}}\newline
+Include dependency graph for wait.\+h\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_wait_options}{Wait\+Options}}
+\begin{DoxyCompactList}\small\item\em Structure representing an option in the waiting screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{wait_8h_a1bf808b710216f304523137df1578c01}\label{wait_8h_a1bf808b710216f304523137df1578c01}} 
+void \mbox{\hyperlink{wait_8h_a1bf808b710216f304523137df1578c01}{init\+\_\+wait}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the waiting screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{wait_8h_a443b9ad911bbc4dbab0f4fec8ba9f5c0}\label{wait_8h_a443b9ad911bbc4dbab0f4fec8ba9f5c0}} 
+void \mbox{\hyperlink{wait_8h_a443b9ad911bbc4dbab0f4fec8ba9f5c0}{draw\+\_\+wait}} ()
+\begin{DoxyCompactList}\small\item\em Draws the waiting screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{wait_8h_af0c689f5c6a8f659a329f3009d1d431c}{wait\+KB}} (uint8\+\_\+t scancode)
+\begin{DoxyCompactList}\small\item\em Handles keyboard input for the waiting screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{wait_8h_a2865b47db308ab6144d6437737e644be}\label{wait_8h_a2865b47db308ab6144d6437737e644be}} 
+void \mbox{\hyperlink{wait_8h_a2865b47db308ab6144d6437737e644be}{wait\+Mouse}} ()
+\begin{DoxyCompactList}\small\item\em Handles mouse input for the waiting screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{wait_8h_a58e6be86baa41846a6aa6ad01e8c0dbb}\label{wait_8h_a58e6be86baa41846a6aa6ad01e8c0dbb}} 
+void \mbox{\hyperlink{wait_8h_a58e6be86baa41846a6aa6ad01e8c0dbb}{delete\+\_\+wait}} ()
+\begin{DoxyCompactList}\small\item\em Deletes the waiting screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions and structures for handling the waiting screen. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{wait_8h_af0c689f5c6a8f659a329f3009d1d431c}\label{wait_8h_af0c689f5c6a8f659a329f3009d1d431c}} 
+\index{wait.h@{wait.h}!waitKB@{waitKB}}
+\index{waitKB@{waitKB}!wait.h@{wait.h}}
+\doxysubsubsection{\texorpdfstring{waitKB()}{waitKB()}}
+{\footnotesize\ttfamily void wait\+KB (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{scancode }\end{DoxyParamCaption})}
+
+
+
+Handles keyboard input for the waiting screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scancode} & The scancode received from the keyboard. \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,229 @@
+\hypertarget{video_8h}{}\doxysection{drivers/video/video.h File Reference}
+\label{video_8h}\index{drivers/video/video.h@{drivers/video/video.h}}
+
+
+Functions for handling video mode setting, pixel drawing, and buffer swapping.  
+
+
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+Include dependency graph for video.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{video_8h_a82f8da2c0f2973010eb5b1e8c1949fb3}{set\+\_\+video\+\_\+mode}} (uint16\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em Sets the video mode to the specified mode. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{video_8h_a78d147fc7fb3c4f1a4b9dcf8c585b032}{map\+\_\+vram}} (uint16\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em Maps the video memory to the specified mode. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{video_8h_aa8595e4a1f85ee8884d70a42b3fdb4cb}{color\+\_\+pixel}} (uint16\+\_\+t x, uint16\+\_\+t y, uint32\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Colors the pixel at the specified position with the given color. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{video_8h_a5e5b25bd525250f61f40b9e9f212d5e6}{vg\+\_\+draw\+\_\+hline}} (uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t len, uint32\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draws a horizontal line at the specified position with the given length and color. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{video_8h_a99d2da2559e11200c6b40c469e9977ec}{vg\+\_\+draw\+\_\+rectangle}} (uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t width, uint16\+\_\+t height, uint32\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draws a rectangle at the specified position with the given width, height, and color. \end{DoxyCompactList}\item 
+uint32\+\_\+t() \mbox{\hyperlink{video_8h_a23ee61e00c842f800dac813d9d53b514}{direct\+\_\+color}} (uint32\+\_\+t R, uint32\+\_\+t G, uint32\+\_\+t B)
+\begin{DoxyCompactList}\small\item\em Creates a direct color from the specified RGB components. \end{DoxyCompactList}\item 
+uint32\+\_\+t() \mbox{\hyperlink{video_8h_a45e6806f77d4ddf03af31f929ee4ad8c}{indexed\+\_\+color}} (uint16\+\_\+t row, uint16\+\_\+t col, uint8\+\_\+t step, uint32\+\_\+t first, uint8\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Creates an indexed color based on the specified parameters. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{video_8h_a4a7701a7c35f0ff156dba3e5f9c9f48e}{print\+\_\+xpm}} (xpm\+\_\+map\+\_\+t xpm, uint16\+\_\+t x, uint16\+\_\+t y)
+\begin{DoxyCompactList}\small\item\em Prints an XPM image at the specified position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{video_8h_a9f0f84fdcad321438ba0ef43836a3c90}\label{video_8h_a9f0f84fdcad321438ba0ef43836a3c90}} 
+void \mbox{\hyperlink{video_8h_a9f0f84fdcad321438ba0ef43836a3c90}{init\+\_\+back\+\_\+buffer}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the back buffer for double buffering. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{video_8h_ad42c7cf5f54fed0714fcf1f6e5e35bee}\label{video_8h_ad42c7cf5f54fed0714fcf1f6e5e35bee}} 
+void \mbox{\hyperlink{video_8h_ad42c7cf5f54fed0714fcf1f6e5e35bee}{swap\+\_\+buffer}} ()
+\begin{DoxyCompactList}\small\item\em Swaps the front and back buffers for double buffering. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions for handling video mode setting, pixel drawing, and buffer swapping. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{video_8h_aa8595e4a1f85ee8884d70a42b3fdb4cb}\label{video_8h_aa8595e4a1f85ee8884d70a42b3fdb4cb}} 
+\index{video.h@{video.h}!color\_pixel@{color\_pixel}}
+\index{color\_pixel@{color\_pixel}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{color\_pixel()}{color\_pixel()}}
+{\footnotesize\ttfamily int() color\+\_\+pixel (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{uint32\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+Colors the pixel at the specified position with the given color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate of the pixel. \\
+\hline
+{\em y} & The y-\/coordinate of the pixel. \\
+\hline
+{\em color} & The color to set the pixel. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/zero otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{video_8h_a23ee61e00c842f800dac813d9d53b514}\label{video_8h_a23ee61e00c842f800dac813d9d53b514}} 
+\index{video.h@{video.h}!direct\_color@{direct\_color}}
+\index{direct\_color@{direct\_color}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{direct\_color()}{direct\_color()}}
+{\footnotesize\ttfamily uint32\+\_\+t() direct\+\_\+color (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{R,  }\item[{uint32\+\_\+t}]{G,  }\item[{uint32\+\_\+t}]{B }\end{DoxyParamCaption})}
+
+
+
+Creates a direct color from the specified RGB components. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em R} & The red component. \\
+\hline
+{\em G} & The green component. \\
+\hline
+{\em B} & The blue component. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The direct color. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{video_8h_a45e6806f77d4ddf03af31f929ee4ad8c}\label{video_8h_a45e6806f77d4ddf03af31f929ee4ad8c}} 
+\index{video.h@{video.h}!indexed\_color@{indexed\_color}}
+\index{indexed\_color@{indexed\_color}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{indexed\_color()}{indexed\_color()}}
+{\footnotesize\ttfamily uint32\+\_\+t() indexed\+\_\+color (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{row,  }\item[{uint16\+\_\+t}]{col,  }\item[{uint8\+\_\+t}]{step,  }\item[{uint32\+\_\+t}]{first,  }\item[{uint8\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+
+
+Creates an indexed color based on the specified parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & The row index. \\
+\hline
+{\em col} & The column index. \\
+\hline
+{\em step} & The color step. \\
+\hline
+{\em first} & The first color. \\
+\hline
+{\em n} & The number of colors. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The indexed color. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{video_8h_a78d147fc7fb3c4f1a4b9dcf8c585b032}\label{video_8h_a78d147fc7fb3c4f1a4b9dcf8c585b032}} 
+\index{video.h@{video.h}!map\_vram@{map\_vram}}
+\index{map\_vram@{map\_vram}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{map\_vram()}{map\_vram()}}
+{\footnotesize\ttfamily int() map\+\_\+vram (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+Maps the video memory to the specified mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & The video mode to map the video memory. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/zero otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{video_8h_a4a7701a7c35f0ff156dba3e5f9c9f48e}\label{video_8h_a4a7701a7c35f0ff156dba3e5f9c9f48e}} 
+\index{video.h@{video.h}!print\_xpm@{print\_xpm}}
+\index{print\_xpm@{print\_xpm}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{print\_xpm()}{print\_xpm()}}
+{\footnotesize\ttfamily int() print\+\_\+xpm (\begin{DoxyParamCaption}\item[{xpm\+\_\+map\+\_\+t}]{xpm,  }\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y }\end{DoxyParamCaption})}
+
+
+
+Prints an XPM image at the specified position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xpm} & The XPM image to print. \\
+\hline
+{\em x} & The x-\/coordinate of the top-\/left corner of the image. \\
+\hline
+{\em y} & The y-\/coordinate of the top-\/left corner of the image. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/zero otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{video_8h_a82f8da2c0f2973010eb5b1e8c1949fb3}\label{video_8h_a82f8da2c0f2973010eb5b1e8c1949fb3}} 
+\index{video.h@{video.h}!set\_video\_mode@{set\_video\_mode}}
+\index{set\_video\_mode@{set\_video\_mode}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{set\_video\_mode()}{set\_video\_mode()}}
+{\footnotesize\ttfamily int() set\+\_\+video\+\_\+mode (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+Sets the video mode to the specified mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & The video mode to set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/zero otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{video_8h_a5e5b25bd525250f61f40b9e9f212d5e6}\label{video_8h_a5e5b25bd525250f61f40b9e9f212d5e6}} 
+\index{video.h@{video.h}!vg\_draw\_hline@{vg\_draw\_hline}}
+\index{vg\_draw\_hline@{vg\_draw\_hline}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{vg\_draw\_hline()}{vg\_draw\_hline()}}
+{\footnotesize\ttfamily int() vg\+\_\+draw\+\_\+hline (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{uint16\+\_\+t}]{len,  }\item[{uint32\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+Draws a horizontal line at the specified position with the given length and color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate of the starting point of the line. \\
+\hline
+{\em y} & The y-\/coordinate of the starting point of the line. \\
+\hline
+{\em len} & The length of the line. \\
+\hline
+{\em color} & The color of the line. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/zero otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{video_8h_a99d2da2559e11200c6b40c469e9977ec}\label{video_8h_a99d2da2559e11200c6b40c469e9977ec}} 
+\index{video.h@{video.h}!vg\_draw\_rectangle@{vg\_draw\_rectangle}}
+\index{vg\_draw\_rectangle@{vg\_draw\_rectangle}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{vg\_draw\_rectangle()}{vg\_draw\_rectangle()}}
+{\footnotesize\ttfamily int() vg\+\_\+draw\+\_\+rectangle (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{uint16\+\_\+t}]{width,  }\item[{uint16\+\_\+t}]{height,  }\item[{uint32\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+Draws a rectangle at the specified position with the given width, height, and color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate of the top-\/left corner of the rectangle. \\
+\hline
+{\em y} & The y-\/coordinate of the top-\/left corner of the rectangle. \\
+\hline
+{\em width} & The width of the rectangle. \\
+\hline
+{\em height} & The height of the rectangle. \\
+\hline
+{\em color} & The color of the rectangle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/zero otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 4

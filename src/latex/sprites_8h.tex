@@ -1,0 +1,146 @@
+\hypertarget{sprites_8h}{}\doxysection{sprites/sprites.h File Reference}
+\label{sprites_8h}\index{sprites/sprites.h@{sprites/sprites.h}}
+
+
+Functions and structures for handling sprites.  
+
+
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../drivers/video/video.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../xpms/backgrounds/menu\+\_\+background.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../xpms/backgrounds/instructions.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../xpms/backgrounds/game\+\_\+background\+\_\+day.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../xpms/backgrounds/game\+\_\+background\+\_\+night.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../xpms/mouse/mouse\+\_\+cursor.\+xpm\char`\"{}}\newline
+Include dependency graph for sprites.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_sprite}{Sprite}}
+\begin{DoxyCompactList}\small\item\em Structure representing a sprite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{sprites_8h_ad26117ec6b562315fcd3e1acc003d760}{load\+\_\+\+Sprite}} (const xpm\+\_\+map\+\_\+t xpm, \mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$sprite)
+\begin{DoxyCompactList}\small\item\em Loads a sprite from an XPM file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sprites_8h_aa7ba8402456698b595643cf7620c3e28}{free\+\_\+\+Sprite}} (\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$sprite)
+\begin{DoxyCompactList}\small\item\em Frees the memory used by a sprite. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sprites_8h_aebcf9cd255a69160f5ae8a959409fe1d}\label{sprites_8h_aebcf9cd255a69160f5ae8a959409fe1d}} 
+void \mbox{\hyperlink{sprites_8h_aebcf9cd255a69160f5ae8a959409fe1d}{load\+\_\+backgrounds}} ()
+\begin{DoxyCompactList}\small\item\em Loads the background images. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sprites_8h_ab83a4d8541bb6bcf5e00a6d5e14ffce7}{set\+\_\+background}} (int index)
+\begin{DoxyCompactList}\small\item\em Sets the background image to be displayed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sprites_8h_af50d9c80d75620cf55ad3c9bb7e89e9f}\label{sprites_8h_af50d9c80d75620cf55ad3c9bb7e89e9f}} 
+void \mbox{\hyperlink{sprites_8h_af50d9c80d75620cf55ad3c9bb7e89e9f}{restore\+\_\+background}} ()
+\begin{DoxyCompactList}\small\item\em Restores the previous background image. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sprites_8h_aaa8fb469fa9c9be4e3b5436dbfc74a10}\label{sprites_8h_aaa8fb469fa9c9be4e3b5436dbfc74a10}} 
+void \mbox{\hyperlink{sprites_8h_aaa8fb469fa9c9be4e3b5436dbfc74a10}{load\+\_\+mouse}} ()
+\begin{DoxyCompactList}\small\item\em Loads the mouse cursor image. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sprites_8h_a4ed02b060c5adca207b5d3f4484912f9}{draw\+\_\+mouse}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Draws the mouse cursor at the specified coordinates. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sprites_8h_a7d52c0d77fb2c5969e3c12f4d1ed8ca3}{draw\+\_\+\+Sprite}} (const \mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$sprite, int x, int y)
+\begin{DoxyCompactList}\small\item\em Draws a sprite at the specified coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sprites_8h_a516572aa0d37c92598d7085fd8a9bf0a}\label{sprites_8h_a516572aa0d37c92598d7085fd8a9bf0a}} 
+void \mbox{\hyperlink{sprites_8h_a516572aa0d37c92598d7085fd8a9bf0a}{delete\+\_\+\+Sprites}} ()
+\begin{DoxyCompactList}\small\item\em Deletes all loaded sprites. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions and structures for handling sprites. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{sprites_8h_a4ed02b060c5adca207b5d3f4484912f9}\label{sprites_8h_a4ed02b060c5adca207b5d3f4484912f9}} 
+\index{sprites.h@{sprites.h}!draw\_mouse@{draw\_mouse}}
+\index{draw\_mouse@{draw\_mouse}!sprites.h@{sprites.h}}
+\doxysubsubsection{\texorpdfstring{draw\_mouse()}{draw\_mouse()}}
+{\footnotesize\ttfamily void draw\+\_\+mouse (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Draws the mouse cursor at the specified coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X-\/coordinate of the mouse cursor. \\
+\hline
+{\em y} & Y-\/coordinate of the mouse cursor. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{sprites_8h_a7d52c0d77fb2c5969e3c12f4d1ed8ca3}\label{sprites_8h_a7d52c0d77fb2c5969e3c12f4d1ed8ca3}} 
+\index{sprites.h@{sprites.h}!draw\_Sprite@{draw\_Sprite}}
+\index{draw\_Sprite@{draw\_Sprite}!sprites.h@{sprites.h}}
+\doxysubsubsection{\texorpdfstring{draw\_Sprite()}{draw\_Sprite()}}
+{\footnotesize\ttfamily void draw\+\_\+\+Sprite (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$}]{sprite,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Draws a sprite at the specified coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite} & Pointer to the sprite structure. \\
+\hline
+{\em x} & X-\/coordinate where the sprite will be drawn. \\
+\hline
+{\em y} & Y-\/coordinate where the sprite will be drawn. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{sprites_8h_aa7ba8402456698b595643cf7620c3e28}\label{sprites_8h_aa7ba8402456698b595643cf7620c3e28}} 
+\index{sprites.h@{sprites.h}!free\_Sprite@{free\_Sprite}}
+\index{free\_Sprite@{free\_Sprite}!sprites.h@{sprites.h}}
+\doxysubsubsection{\texorpdfstring{free\_Sprite()}{free\_Sprite()}}
+{\footnotesize\ttfamily void free\+\_\+\+Sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$}]{sprite }\end{DoxyParamCaption})}
+
+
+
+Frees the memory used by a sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite} & Pointer to the sprite structure. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sprites_8h_ad26117ec6b562315fcd3e1acc003d760}\label{sprites_8h_ad26117ec6b562315fcd3e1acc003d760}} 
+\index{sprites.h@{sprites.h}!load\_Sprite@{load\_Sprite}}
+\index{load\_Sprite@{load\_Sprite}!sprites.h@{sprites.h}}
+\doxysubsubsection{\texorpdfstring{load\_Sprite()}{load\_Sprite()}}
+{\footnotesize\ttfamily int load\+\_\+\+Sprite (\begin{DoxyParamCaption}\item[{const xpm\+\_\+map\+\_\+t}]{xpm,  }\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$}]{sprite }\end{DoxyParamCaption})}
+
+
+
+Loads a sprite from an XPM file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xpm} & XPM image to load. \\
+\hline
+{\em sprite} & Pointer to the sprite structure to store the loaded sprite. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/zero otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sprites_8h_ab83a4d8541bb6bcf5e00a6d5e14ffce7}\label{sprites_8h_ab83a4d8541bb6bcf5e00a6d5e14ffce7}} 
+\index{sprites.h@{sprites.h}!set\_background@{set\_background}}
+\index{set\_background@{set\_background}!sprites.h@{sprites.h}}
+\doxysubsubsection{\texorpdfstring{set\_background()}{set\_background()}}
+{\footnotesize\ttfamily void set\+\_\+background (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Sets the background image to be displayed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index of the background image. \\
+\hline
+\end{DoxyParams}

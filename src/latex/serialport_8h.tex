@@ -1,0 +1,85 @@
+\hypertarget{serialport_8h}{}\doxysection{drivers/serial\+\_\+port/serialport.h File Reference}
+\label{serialport_8h}\index{drivers/serial\_port/serialport.h@{drivers/serial\_port/serialport.h}}
+
+
+Functions for handling serial port operations and interrupts.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__serial__port_ga047842842ecc9b26f526d098df1e1de1}{COM1\+\_\+\+UART\+\_\+\+BASE}}~0x3\+F8
+\item 
+\#define \mbox{\hyperlink{group__serial__port_ga3685c78b9bd6dd0fa3861807e24a4e1b}{COM1\+\_\+\+IRQ}}~4
+\item 
+\#define \mbox{\hyperlink{group__serial__port_gaa6f7e7a9f4551d6151f9d45362118a50}{RBR}}~0x00
+\item 
+\#define \mbox{\hyperlink{group__serial__port_ga5e9787adf3c9afcc4b781e85bb545b35}{THR}}~0x00
+\item 
+\#define \mbox{\hyperlink{group__serial__port_ga3e27fa35f9febccdc4a0c28a5c8cffbb}{IER}}~0x01
+\item 
+\#define \mbox{\hyperlink{group__serial__port_ga67004975983f9c99226d63db17ba74c4}{IIR}}~0x02
+\item 
+\#define \mbox{\hyperlink{group__serial__port_ga264b36b13386e3f62fe69e04711bc006}{FCR}}~0x02
+\item 
+\#define \mbox{\hyperlink{group__serial__port_ga851cb396b6eaa97346364a772b439f37}{LCR}}~0x03
+\item 
+\#define \mbox{\hyperlink{group__serial__port_ga65364db1603cde6f6533cb61bcfcf553}{MCR}}~0x04
+\item 
+\#define \mbox{\hyperlink{group__serial__port_gad51d51aee21f6cc77d4955221aee3dcb}{LSR}}~0x05
+\item 
+\#define \mbox{\hyperlink{group__serial__port_gad4806a0bfd996121bc27d2466393207e}{MSR}}~0x06
+\item 
+\#define \mbox{\hyperlink{group__serial__port_gafa556a68b7c0fcc58cd87c5f36859f30}{BR}}~0x07
+\item 
+\#define \mbox{\hyperlink{group__serial__port_ga4466639cd64ebf372a621168c5e25964}{DLL}}~0x00
+\item 
+\#define \mbox{\hyperlink{group__serial__port_ga3b48b12dc65f62dd40ab1163fe7997fb}{DLM}}~0x01
+\item 
+\#define \mbox{\hyperlink{group__serial__port_gae6e9a941061832e3150804bf169a2e97}{LSR\+\_\+\+DATA\+\_\+\+READY}}~(1 $<$$<$ 0)
+\item 
+\#define \mbox{\hyperlink{group__serial__port_gae844dd49bb0e0770bcf46ad5bfe20973}{LSR\+\_\+\+OE}}~(1 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{group__serial__port_ga0ee28cdbc0917173f06cc39527452a8f}{LSR\+\_\+\+PE}}~(1 $<$$<$ 2)
+\item 
+\#define \mbox{\hyperlink{group__serial__port_gae3f9ccc88c615d1257ad400cf27af7eb}{LSR\+\_\+\+FE}}~(1 $<$$<$ 3)
+\item 
+\#define \mbox{\hyperlink{group__serial__port_ga0fa2f414cac085b768774f2881321b60}{LSR\+\_\+\+BI}}~(1 $<$$<$ 4)
+\item 
+\#define \mbox{\hyperlink{group__serial__port_ga8c1a828f5fe296a9c1668cf3e72c00c1}{LSR\+\_\+\+THRE}}~(1 $<$$<$ 5)
+\item 
+\#define \mbox{\hyperlink{group__serial__port_ga96374894dadc495a07b52f843a347f57}{LSR\+\_\+\+TRANS\+\_\+\+EMPTY}}~(1 $<$$<$ 6)
+\item 
+\#define \mbox{\hyperlink{group__serial__port_ga20024c43f977ff2a13f6eddde0607ba1}{LSR\+\_\+\+RCVR\+\_\+\+FIFO\+\_\+\+ERROR}}~(1 $<$$<$ 7)
+\item 
+\#define \mbox{\hyperlink{group__serial__port_ga8c98feb6953fbe0ac5ea029a51ee83dd}{IER\+\_\+\+ERBFI}}~(1 $<$$<$ 0)
+\item 
+\#define \mbox{\hyperlink{group__serial__port_ga1e0a94b0c9c1c1dd9a38a9bbcf34f273}{IER\+\_\+\+ETBEI}}~(1 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{group__serial__port_gaa57877e202ebf65e9f9b08e14b539fd3}{IER\+\_\+\+ELSI}}~(1 $<$$<$ 2)
+\item 
+\#define \mbox{\hyperlink{group__serial__port_gaa7fadcbbfdbde55471b8bc82014e54e0}{IER\+\_\+\+EDSSI}}~(1 $<$$<$ 3)
+\item 
+\#define \mbox{\hyperlink{group__serial__port_ga5d4e78266f49b88aa8c4ecc0ad4be3ac}{IIR\+\_\+\+NO\+\_\+\+INT\+\_\+\+PENDING}}~(1 $<$$<$ 0)
+\item 
+\#define \mbox{\hyperlink{group__serial__port_ga165b22b5d644704b505eccfc094e4b1f}{IIR\+\_\+\+ID}}~((1 $<$$<$ 1) $\vert$ (1 $<$$<$ 2) $\vert$ (1 $<$$<$ 3))
+\item 
+\#define \mbox{\hyperlink{group__serial__port_gae2bd61e8808ce0b2356f13ecee52a19d}{IIR\+\_\+\+OGN\+\_\+\+LINE\+\_\+\+STATUS}}~((1 $<$$<$ 1) $\vert$ (1 $<$$<$ 2))
+\item 
+\#define \mbox{\hyperlink{group__serial__port_gae2fd463a1a588e786214831f85058264}{IIR\+\_\+\+OGN\+\_\+\+RCVD\+\_\+\+DATA\+\_\+\+AVL}}~(1 $<$$<$ 2)
+\item 
+\#define \mbox{\hyperlink{group__serial__port_ga3cf797e047136414aa37d350a4b0c0d3}{IIR\+\_\+\+FIFO\+\_\+\+CT}}~((1 $<$$<$ 3) $\vert$ (1 $<$$<$ 2))
+\item 
+\#define \mbox{\hyperlink{group__serial__port_ga83dfe90e613ccd3e474367ea163a60c3}{IIR\+\_\+\+OGN\+\_\+\+TRANS\+\_\+\+EMPTY}}~(1 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{group__serial__port_gad72e5cb0ce2af1cb513ad717009e3e32}{IIR\+\_\+\+INT\+\_\+\+PENDING}}~0x00
+\item 
+\#define \mbox{\hyperlink{group__serial__port_ga0fb29593ea0594efb9d5d4fe1934ced4}{FCR\+\_\+\+CLEAR}}~((1 $<$$<$ 0) $\vert$ (1 $<$$<$ 1) $\vert$ (1 $<$$<$ 2))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions for handling serial port operations and interrupts. 
+

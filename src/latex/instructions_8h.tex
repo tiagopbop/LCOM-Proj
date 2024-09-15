@@ -1,0 +1,62 @@
+\hypertarget{instructions_8h}{}\doxysection{game\+\_\+logic/instructions.h File Reference}
+\label{instructions_8h}\index{game\_logic/instructions.h@{game\_logic/instructions.h}}
+
+
+Functions and structures for handling game instructions.  
+
+
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../drivers/video/video.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../drivers/keyboard\+\_\+and\+\_\+mouse/mouse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../sprites/sprites.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../xpms/instructions\+\_\+options/back.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../xpms/instructions\+\_\+options/back\+\_\+highlight.\+xpm\char`\"{}}\newline
+Include dependency graph for instructions.\+h\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_instructions_option}{Instructions\+Option}}
+\begin{DoxyCompactList}\small\item\em Structure representing an option in the instructions screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{instructions_8h_a4f7e2b00d6430baa7bdb8d2caaa53fee}\label{instructions_8h_a4f7e2b00d6430baa7bdb8d2caaa53fee}} 
+void \mbox{\hyperlink{instructions_8h_a4f7e2b00d6430baa7bdb8d2caaa53fee}{init\+\_\+instructions}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the instructions screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{instructions_8h_a78f217009cd3cf7b5bc1721616302c65}\label{instructions_8h_a78f217009cd3cf7b5bc1721616302c65}} 
+void \mbox{\hyperlink{instructions_8h_a78f217009cd3cf7b5bc1721616302c65}{draw\+\_\+instructions}} ()
+\begin{DoxyCompactList}\small\item\em Draws the instructions screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{instructions_8h_aefe4d4025861da335264f8dbb2d5b25e}{instructions\+KB}} (uint8\+\_\+t scancode)
+\begin{DoxyCompactList}\small\item\em Handles keyboard input for the instructions screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{instructions_8h_a47b109aed994d9316ef9888f68290b33}\label{instructions_8h_a47b109aed994d9316ef9888f68290b33}} 
+void \mbox{\hyperlink{instructions_8h_a47b109aed994d9316ef9888f68290b33}{instructions\+Mouse}} ()
+\begin{DoxyCompactList}\small\item\em Handles mouse input for the instructions screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{instructions_8h_a755b2bac687c3949ecd06220aef50361}\label{instructions_8h_a755b2bac687c3949ecd06220aef50361}} 
+void \mbox{\hyperlink{instructions_8h_a755b2bac687c3949ecd06220aef50361}{delete\+\_\+instructions}} ()
+\begin{DoxyCompactList}\small\item\em Deletes the instructions screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions and structures for handling game instructions. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{instructions_8h_aefe4d4025861da335264f8dbb2d5b25e}\label{instructions_8h_aefe4d4025861da335264f8dbb2d5b25e}} 
+\index{instructions.h@{instructions.h}!instructionsKB@{instructionsKB}}
+\index{instructionsKB@{instructionsKB}!instructions.h@{instructions.h}}
+\doxysubsubsection{\texorpdfstring{instructionsKB()}{instructionsKB()}}
+{\footnotesize\ttfamily void instructions\+KB (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{scancode }\end{DoxyParamCaption})}
+
+
+
+Handles keyboard input for the instructions screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scancode} & The scancode received from the keyboard. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 1

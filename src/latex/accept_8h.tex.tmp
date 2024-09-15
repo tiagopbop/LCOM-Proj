@@ -1,0 +1,121 @@
+\hypertarget{accept_8h}{}\doxysection{game\+\_\+logic/accept.h File Reference}
+\label{accept_8h}\index{game\_logic/accept.h@{game\_logic/accept.h}}
+
+
+Functions and structures for handling user acceptance of invites.  
+
+
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../drivers/video/video.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../drivers/keyboard\+\_\+and\+\_\+mouse/mouse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../drivers/serial\+\_\+port/serial\+\_\+port.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../sprites/sprites.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../xpms/accept\+\_\+options/yes.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../xpms/accept\+\_\+options/yes\+\_\+highlight.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../xpms/accept\+\_\+options/no.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../xpms/accept\+\_\+options/no\+\_\+highlight.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../xpms/wait\+\_\+screens/accept\+\_\+invite.\+xpm\char`\"{}}\newline
+Include dependency graph for accept.\+h\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_accept_options}{Accept\+Options}}
+\begin{DoxyCompactList}\small\item\em Structure representing the accept options. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{accept_8h_a7c74aebc2901d0248aaba1339115703b}\label{accept_8h_a7c74aebc2901d0248aaba1339115703b}} 
+enum \mbox{\hyperlink{accept_8h_a7c74aebc2901d0248aaba1339115703b}{ACCEPT\+\_\+\+OPTION}} \{ {\bfseries ACCEPT\+\_\+\+INVITE}
+, {\bfseries REFUSE}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration defining the possible options for accepting invites. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{accept_8h_a3587675613529eebde077acd160b8ca8}\label{accept_8h_a3587675613529eebde077acd160b8ca8}} 
+void \mbox{\hyperlink{accept_8h_a3587675613529eebde077acd160b8ca8}{init\+\_\+accept}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the acceptance screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{accept_8h_a6242bfcb7387a80b0700462bba90d6dc}\label{accept_8h_a6242bfcb7387a80b0700462bba90d6dc}} 
+void \mbox{\hyperlink{accept_8h_a6242bfcb7387a80b0700462bba90d6dc}{draw\+\_\+accept}} ()
+\begin{DoxyCompactList}\small\item\em Draws the acceptance screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{accept_8h_aa287b6fdd1ea4f0e9efa2782a53c9c8f}{accept\+KB}} (uint8\+\_\+t scancode)
+\begin{DoxyCompactList}\small\item\em Handles keyboard input for the acceptance screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{accept_8h_aea2195476dc27607a0e39f896334f7d7}\label{accept_8h_aea2195476dc27607a0e39f896334f7d7}} 
+void \mbox{\hyperlink{accept_8h_aea2195476dc27607a0e39f896334f7d7}{accept\+Mouse}} ()
+\begin{DoxyCompactList}\small\item\em Handles mouse input for the acceptance screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{accept_8h_acfa00131b8571e4fbae83dccb53b230d}\label{accept_8h_acfa00131b8571e4fbae83dccb53b230d}} 
+void \mbox{\hyperlink{accept_8h_acfa00131b8571e4fbae83dccb53b230d}{delete\+\_\+accept}} ()
+\begin{DoxyCompactList}\small\item\em Deletes the acceptance screen resources. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{accept_8h_a7c74aebc2901d0248aaba1339115703b}{ACCEPT\+\_\+\+OPTION}} \mbox{\hyperlink{accept_8h_a6c3b05fa3d5b7f198d89952a59fd0cca}{mouse\+\_\+hover\+\_\+option\+\_\+accept}} ()
+\begin{DoxyCompactList}\small\item\em Determines which option the mouse is hovering over. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{accept_8h_a3aac003b2d5db16adc1aae2e24b9aded}{select\+\_\+option\+\_\+accept}} (\mbox{\hyperlink{accept_8h_a7c74aebc2901d0248aaba1339115703b}{ACCEPT\+\_\+\+OPTION}} option)
+\begin{DoxyCompactList}\small\item\em Selects the specified option for acceptance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{accept_8h_a5a885df8c2e47dc4e1660d6ef9c78e21}{highlight\+\_\+\+Accept\+\_\+option}} (\mbox{\hyperlink{accept_8h_a7c74aebc2901d0248aaba1339115703b}{ACCEPT\+\_\+\+OPTION}} option)
+\begin{DoxyCompactList}\small\item\em Highlights the specified acceptance option. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions and structures for handling user acceptance of invites. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{accept_8h_aa287b6fdd1ea4f0e9efa2782a53c9c8f}\label{accept_8h_aa287b6fdd1ea4f0e9efa2782a53c9c8f}} 
+\index{accept.h@{accept.h}!acceptKB@{acceptKB}}
+\index{acceptKB@{acceptKB}!accept.h@{accept.h}}
+\doxysubsubsection{\texorpdfstring{acceptKB()}{acceptKB()}}
+{\footnotesize\ttfamily void accept\+KB (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{scancode }\end{DoxyParamCaption})}
+
+
+
+Handles keyboard input for the acceptance screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scancode} & The scancode received from the keyboard. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{accept_8h_a5a885df8c2e47dc4e1660d6ef9c78e21}\label{accept_8h_a5a885df8c2e47dc4e1660d6ef9c78e21}} 
+\index{accept.h@{accept.h}!highlight\_Accept\_option@{highlight\_Accept\_option}}
+\index{highlight\_Accept\_option@{highlight\_Accept\_option}!accept.h@{accept.h}}
+\doxysubsubsection{\texorpdfstring{highlight\_Accept\_option()}{highlight\_Accept\_option()}}
+{\footnotesize\ttfamily void highlight\+\_\+\+Accept\+\_\+option (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{accept_8h_a7c74aebc2901d0248aaba1339115703b}{ACCEPT\+\_\+\+OPTION}}}]{option }\end{DoxyParamCaption})}
+
+
+
+Highlights the specified acceptance option. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em option} & The option to highlight. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{accept_8h_a6c3b05fa3d5b7f198d89952a59fd0cca}\label{accept_8h_a6c3b05fa3d5b7f198d89952a59fd0cca}} 
+\index{accept.h@{accept.h}!mouse\_hover\_option\_accept@{mouse\_hover\_option\_accept}}
+\index{mouse\_hover\_option\_accept@{mouse\_hover\_option\_accept}!accept.h@{accept.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_hover\_option\_accept()}{mouse\_hover\_option\_accept()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{accept_8h_a7c74aebc2901d0248aaba1339115703b}{ACCEPT\+\_\+\+OPTION}} mouse\+\_\+hover\+\_\+option\+\_\+accept (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Determines which option the mouse is hovering over. 
+
+\begin{DoxyReturn}{Returns}
+The option the mouse is hovering over. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{accept_8h_a3aac003b2d5db16adc1aae2e24b9aded}\label{accept_8h_a3aac003b2d5db16adc1aae2e24b9aded}} 
+\index{accept.h@{accept.h}!select\_option\_accept@{select\_option\_accept}}
+\index{select\_option\_accept@{select\_option\_accept}!accept.h@{accept.h}}
+\doxysubsubsection{\texorpdfstring{select\_option\_accept()}{select\_option\_accept()}}
+{\footnotesize\ttfamily void select\+\_\+option\+\_\+accept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{accept_8h_a7c74aebc2901d0248aaba1339115703b}{ACCEPT\+\_\+\+OPTION}}}]{option }\end{DoxyParamCaption})}
+
+
+
+Selects the specified option for acceptance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em option} & The option to select. \\
+\hline
+\end{DoxyParams}
